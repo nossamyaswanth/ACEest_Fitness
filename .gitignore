@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Pytest cache
+.pytest_cache/
+
+# Docker
+*.log
+
+# macOS
+.DS_Store
+
