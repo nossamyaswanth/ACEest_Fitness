@@ -12,11 +12,11 @@ spec:
       labels:
         app: aceest-fitness
     spec:
-      containers:
-      - name: aceest-fitness
-        image: your-dockerhub-username/aceest_fitness:v1.3
-        ports:
-        - containerPort: 5000
+  containers:
+    - name: aceest-fitness
+      image: 7337432133/aceest_fitness:latest
+      ports:
+        - containerPort: 5050
         readinessProbe:
           httpGet:
             path: /health
