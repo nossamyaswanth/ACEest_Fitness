@@ -12,14 +12,8 @@ spec:
       labels:
         app: aceest-fitness
     spec:
-  containers:
-    - name: aceest-fitness
-      image: 7337432133/aceest_fitness:latest
-      ports:
+      containers:
+      - name: aceest-fitness
+        image: 7337432133/aceest_fitness:latest
+        ports:
         - containerPort: 5050
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 5000
-          initialDelaySeconds: 5
-          periodSeconds: 10
