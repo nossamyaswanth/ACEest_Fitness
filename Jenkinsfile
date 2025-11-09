@@ -30,15 +30,16 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQubeServer') {
                     sh """
-                    sonar-scanner \
-                      -Dsonar.projectKey=ACEest_Fitness \
-                      -Dsonar.sources=. \
-                      -Dsonar.host.url=$SONAR_HOST_URL \
-                      -Dsonar.login=$SONAR_AUTH_TOKEN
+                    ${tool 'SonarQubeScanner'}/bin/sonar-scanner \
+                    -Dsonar.projectKey=ACEest_Fitness \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=$SONAR_HOST_URL \
+                    -Dsonar.login=$SONAR_AUTH_TOKEN
                     """
                 }
             }
         }
+
 
         stage('Build Docker Image') {
             steps {
